@@ -14,6 +14,7 @@ def guess_number():
                 break
             elif guess < number:
                 print("Too low. Try again.")
+<<<<<<< HEAD
             else:
                 print("Too high. Try again.")
             guess_left -= 1
@@ -22,5 +23,12 @@ def guess_number():
     
     if guess_left == 0:
         print(f"Sorry, you've run out of guesses. The number was {number}")
+=======
+                
+            else:
+                print("To high. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter a number or 'q' to quit.")
+>>>>>>> guess-hints
 guess_number()
 
