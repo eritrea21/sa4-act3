@@ -12,8 +12,15 @@ def guess_number():
             if guess == number:
                 print("Congratulation! You guessed the correct number.")
                 break
+            elif guess < number:
+                print("Too low. Try again.")
             else:
-                print("Incorrect guess. Try again.")
+                print("Too high. Try again.")
+            guess_left -= 1
         except ValueError:
             print("Invalid input. Please enter a number or 'q' to quit.")
+    
+    if guess_left == 0:
+        print(f"Sorry, you've run out of guesses. The number was {number}")
+guess_number()
 
